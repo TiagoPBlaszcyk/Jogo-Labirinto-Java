@@ -10,11 +10,11 @@ public class Labirinto {
     private static final char PAREDE_SUPDIR = '┐';
     private static final char PAREDE_INFESQ = '└';
     
-    //┌ ─ ┐  └ ─ ┘ │ ☺ ♦ ☀ † ▪
+    //┌ ─ ┐  └ ─ ┘ │ ☺ ☻ ♦ ☀ † ◦ ▪ ⸙
     private static final char PAREDE_INTERNA = '⸙';
     private static final char VAZIO = ' '; 
-    private static final char INICIO = '☺';
-    private static final char DESTINO = '☻';
+    private static final char INICIO = '☻';
+    private static final char DESTINO = '†';
     private static final char CAMINHO = '◦';
     private static final char SEM_SAIDA = '▪';
 

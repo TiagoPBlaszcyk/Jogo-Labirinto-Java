@@ -1,6 +1,6 @@
 public class Labirinto {
     private static final char LINHA = 10;
-    private static final char COLUNA = 10;
+    private static final char COLUNA = 15;
     private static final double PROBABILIDADE = 0.7;
 
     private static final char PAREDE_VERTICAL = '│';
@@ -90,7 +90,6 @@ public class Labirinto {
 
     // Imprime a MATRIZ
     public static void imprimir() throws InterruptedException {
-        Thread.sleep(350);
         for (int i = 0; i < LINHA; i++) {
             for (int j = 0; j < COLUNA; j++) {
                 System.out.print(tabuleiro[i][j]);
@@ -144,11 +143,13 @@ public class Labirinto {
             achou = true;
         } else if (posicaoVazia(proxLinha, proxColuna)) {
             tabuleiro[proxLinha][proxColuna] = CAMINHO;
+            Thread.sleep(300);
             imprimir();
             achou = procurarCaminho(proxLinha, proxColuna);
             if (!achou) {
                 tabuleiro[proxLinha][proxColuna] = SEM_SAIDA;
                 tabuleiro[horizontal][vertical] = SEM_SAIDA;
+                Thread.sleep(100);
                 imprimir();
             }
         }
